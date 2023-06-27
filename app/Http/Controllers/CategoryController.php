@@ -11,7 +11,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('categories');
+        $collection = DB::table("categories")->get();
+        return view('categories',compact('collection'));
     }
 
     /**
@@ -19,10 +20,11 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        DB::table('categories')->insert(
-            ['name'=>'Drinks' , 'created_at'=>now() ]
-        );
+        // DB::table('categories')->insert(
+        //     ['name'=>'Drinks' , 'created_at'=>now() ]
+        // );
         // dd(now()->)
+        return view('createCategory');
     }
 
     /**
@@ -30,7 +32,11 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request->name);
+        DB::table('categories')->insert(
+            ['name'=>$request->name , 'details'=>$request->detail]
+        );
+        return redirect()->route('categories.index',['status'=>'OK']);
     }
 
     /**
@@ -62,6 +68,7 @@ class CategoryController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $numOfAffectedRows= DB::table('categories')->where('id','=',$id)->delete();
+        return redirect()->route('categories.index',compact('numOfAffectedRows'));
     }
 }
