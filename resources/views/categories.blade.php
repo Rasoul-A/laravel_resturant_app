@@ -28,7 +28,7 @@
                     <div class="actions-group">
                         <form action="{{route('categories.destroy',$item->id)}}" method="POST">
                         <a href="#" class="btn btn-light-blue">Show</a>
-                        <a href="#" class="btn btn-blue">Edit</a>
+                        <a href="{{route('categories.edit',$item->id)}}" class="btn btn-blue">Edit</a>
                         <button type="submit" class="btn btn-red">Delete</a>
                             @csrf
                             @method('DELETE')

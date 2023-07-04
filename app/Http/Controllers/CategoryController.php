@@ -52,7 +52,8 @@ class CategoryController extends Controller
      */
     public function edit(string $id)
     {
-        //
+       $item =  DB::table('categories')->where('id',$id)->first();
+       return view("editCategory", compact('item'));
     }
 
     /**
@@ -60,7 +61,8 @@ class CategoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        DB::table("categories")->where('id',$id)->update(['name'=>$request->name , 'details'=>$request->detail]);
+        return redirect()->route('categories.index');
     }
 
     /**
