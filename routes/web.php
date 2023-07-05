@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CategoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/authtest',function(){
+    return '<h1>You are logged in!</h1>';
+})->middleware('auth.basic');
 
+Route::resource('categories',CategoryController::class)->middleware('auth');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
