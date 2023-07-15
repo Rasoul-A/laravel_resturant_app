@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Categories</title>
-    <link rel="stylesheet" href="{{ asset('css/category.css') }}">
-
-</head>
-<body>
+@extends('layouts.main')
+@section('content')
     <div class="container">
         <h1>Create category page</h1>
         <a href="{{route('categories.index')}}" class="btn btn-green to_right">Back</a>
@@ -25,5 +16,4 @@
             <input type="submit" value="Submit">
         </form>
     </div>
-</body>
-</html>
+@endsection

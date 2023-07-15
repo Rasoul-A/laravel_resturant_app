@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Categories</title>
-    <link rel="stylesheet" href="{{ asset('css/category.css') }}">
-
-</head>
-<body>
-    <div class="container">
+@extends('layouts.main')
+@section('content')
         <h1>Food Categories</h1>
         <a href="{{route('categories.create')}}" class="btn btn-green to_left">Add new Category</a>
         <table>
@@ -27,7 +17,7 @@
                 <td>
                     <div class="actions-group">
                         <form action="{{route('categories.destroy',$item->id)}}" method="POST">
-                        <a href="#" class="btn btn-light-blue">Show</a>
+                        <a href="{{route('categories.show',[$item->cat_id,'category_name'=>$item->name])}}" class="btn btn-light-blue">Show</a>
                         <a href="{{route('categories.edit',$item->id)}}" class="btn btn-blue">Edit</a>
                         <button type="submit" class="btn btn-red">Delete</a>
                             @csrf
@@ -39,6 +29,4 @@
             @endforeach
         </table>
         {{-- <form method="POST" action={{route()}} --}}
-    </div>
-</body>
-</html>
+@endsection

@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ResturantItemsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +24,7 @@ Route::get('/authtest',function(){
 })->middleware('auth.basic');
 
 Route::resource('categories',CategoryController::class)->middleware('auth');
+Route::resource('items',ResturantItemsController::class)->middleware('auth');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

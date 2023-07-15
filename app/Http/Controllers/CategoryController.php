@@ -12,7 +12,7 @@ class CategoryController extends Controller
     public function index()
     {
         $collection = DB::table("categories")->get();
-        return view('categories',compact('collection'));
+        return view('category.categories',compact('collection'));
     }
 
     /**
@@ -24,7 +24,7 @@ class CategoryController extends Controller
         //     ['name'=>'Drinks' , 'created_at'=>now() ]
         // );
         // dd(now()->)
-        return view('createCategory');
+        return view('category.createCategory');
     }
 
     /**
@@ -33,8 +33,10 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         // dd($request->name);
+        $newTypeValue  = DB::table("categories")->count();
         DB::table('categories')->insert(
-            ['name'=>$request->name , 'details'=>$request->detail]
+            ['name'=>$request->name , 'details'=>$request->detail , 'created_at' =>now()->subMonth(),
+            'cat_id' => $newTypeValue +1]
         );
         return redirect()->route('categories.index',['status'=>'OK']);
     }
@@ -42,9 +44,12 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $cat_id , Request $request)
     {
-        //
+        // All items contained in this category.
+        $collection = DB::table('categories')->rightJoin('resturant_items', 'categories.cat_id' , '=', 'resturant_items.category_id')->get();
+        return view('resturant_items.items',compact('collection'),['category'=>$request->query('category_name')]);
+
     }
 
     /**
@@ -53,7 +58,7 @@ class CategoryController extends Controller
     public function edit(string $id)
     {
        $item =  DB::table('categories')->where('id',$id)->first();
-       return view("editCategory", compact('item'));
+       return view("category.editCategory", compact('item'));
     }
 
     /**
@@ -61,7 +66,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        DB::table("categories")->where('id',$id)->update(['name'=>$request->name , 'details'=>$request->detail]);
+        DB::table("categories")->where('id',$id)->update(['name'=>$request->name , 'details'=>$request->detail,'updated_at' =>now()->subMonth()]);
         return redirect()->route('categories.index');
     }
 
