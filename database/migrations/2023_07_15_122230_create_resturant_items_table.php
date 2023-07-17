@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('resturant_items', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->decimal("category_id",2,0,true)->nullable()->unique();
+            $table->decimal("category_id",2,0,true)->nullable();
             $table->string("name",100)->nullable(false)->unique();
             $table->text("ingredients")->nullable(false);
             $table->unsignedDecimal("price",10,2)->nullable(false);

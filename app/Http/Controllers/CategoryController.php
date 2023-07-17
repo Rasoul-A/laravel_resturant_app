@@ -47,7 +47,9 @@ class CategoryController extends Controller
     public function show(string $cat_id , Request $request)
     {
         // All items contained in this category.
-        $collection = DB::table('categories')->rightJoin('resturant_items', 'categories.cat_id' , '=', 'resturant_items.category_id')->get();
+        // $collection = DB::table('categories')->join('resturant_items', 'categories.cat_id' , '=', 'resturant_items.category_id')->get();
+        $collection = DB::table("resturant_items")->where('category_id', $cat_id)->get();
+        // dd($collection);
         return view('resturant_items.items',compact('collection'),['category'=>$request->query('category_name')]);
 
     }

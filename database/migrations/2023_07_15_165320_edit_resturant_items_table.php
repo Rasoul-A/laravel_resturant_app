@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::table('resturant_items',function(Blueprint $table)
         {
             $table->foreign("category_id")->references("cat_id")->on('categories')->onDelete('set null')->onUpdate('cascade');
-            $table->dropUnique(['category_id']);
+            // $table->dropUnique(['category_id']);
         });
     }
 

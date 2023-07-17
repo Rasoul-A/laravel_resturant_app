@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::table('categories',function(Blueprint $table)
         {
             $table->decimal("cat_id",2,0,true)->nullable(true)->unique();
-            $table->foreign("category_id")->references("cat_id")->on('categories')->onDelete('set null')->onUpdate('cascade');
+            
         });
     }
 
