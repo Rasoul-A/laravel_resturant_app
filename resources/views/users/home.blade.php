@@ -15,6 +15,113 @@
     </nav>
 </section>
 <section class="content">
-
+<div class="item-card">
+    <h3 class="name">Balh blah</h3>
+    <p class="ingredients">Lorem ipsum dolor sit amet consectet</p>
+    <span class="price">233100</span>
+    <div class="is_available"></div>
+    <div class="controls">
+        <div class="order btn btn-blue"><span>Order</span>
+            <div class="order_form">Order form</div>
+        </div>
+        <button class="btn btn-red">Comments</button>
+    </div>
+</div>
+<div class="item-card">
+    <h3 class="name">Balh blah</h3>
+    <p class="ingredients">Lorem ipsum dolor sit amet consectet</p>
+    <span class="price">233100</span>
+    <div class="is_available"></div>
+</div>
+<div class="item-card">
+    <h3 class="name">Balh blah</h3>
+    <p class="ingredients">Lorem ipsum dolor sit amet consectet</p>
+    <span class="price">233100</span>
+    <div class="is_available"></div>
+</div>
+<div class="item-card">
+    <h3 class="name">Balh blah</h3>
+    <p class="ingredients">Lorem ipsum dolor sit amet consectet</p>
+    <span class="price">233100</span>
+    <div class="is_available"></div>
+</div>
+<div class="item-card">
+    <h3 class="name">Balh blah</h3>
+    <p class="ingredients">Lorem ipsum dolor sit amet consectet</p>
+    <span class="price">233100</span>
+    <div class="is_available"></div>
+</div>
+<div class="item-card">
+    <h3 class="name">Balh blah</h3>
+    <p class="ingredients">Lorem ipsum dolor sit amet consectet</p>
+    <span class="price">233100</span>
+    <div class="is_available"></div>
+</div>
+<div class="item-card">
+    <h3 class="name">Balh blah</h3>
+    <p class="ingredients">Lorem ipsum dolor sit amet consectet</p>
+    <span class="price">233100</span>
+    <div class="is_available"></div>
+</div>
+<div class="item-card">
+    <h3 class="name">Balh blah</h3>
+    <p class="ingredients">Lorem ipsum dolor sit amet consectet</p>
+    <span class="price">233100</span>
+    <div class="is_available"></div>
+</div>
+<div class="item-card">
+    <h3 class="name">Balh blah</h3>
+    <p class="ingredients">Lorem ipsum dolor sit amet consectet</p>
+    <span class="price">233100</span>
+    <div class="is_available"></div>
+</div>
+<div class="item-card">
+    <h3 class="name">Balh blah</h3>
+    <p class="ingredients">Lorem ipsum dolor sit amet consectet</p>
+    <span class="price">233100</span>
+    <div class="is_available"></div>
+</div>
+<div class="item-card">
+    <h3 class="name">Balh blah</h3>
+    <p class="ingredients">Lorem ipsum dolor sit amet consectet</p>
+    <span class="price">233100</span>
+    <div class="is_available"></div>
+</div>
+<div class="item-card">
+    <h3 class="name">Balh blah</h3>
+    <p class="ingredients">Lorem ipsum dolor sit amet consectet</p>
+    <span class="price">233100</span>
+    <div class="is_available"></div>
+</div>
+<div class="item-card">
+    <h3 class="name">Balh blah</h3>
+    <p class="ingredients">Lorem ipsum dolor sit amet consectet</p>
+    <span class="price">233100</span>
+    <div class="is_available"></div>
+</div>
+<div class="item-card">
+    <h3 class="name">Balh blah</h3>
+    <p class="ingredients">Lorem ipsum dolor sit amet consectet</p>
+    <span class="price">233100</span>
+    <div class="is_available"></div>
+</div>
+<div class="item-card">
+    <h3 class="name">Balh blah</h3>
+    <p class="ingredients">Lorem ipsum dolor sit amet consectet</p>
+    <span class="price">233100</span>
+    <div class="is_available"></div>
+</div>
+<div class="item-card">
+    <h3 class="name">Balh blah</h3>
+    <p class="ingredients">Lorem ipsum dolor sit amet consectet</p>
+    <span class="price">233100</span>
+    <div class="is_available"></div>
+</div>
+<div class="item-card">
+    <h3 class="name">Balh blah</h3>
+    <p class="ingredients">Lorem ipsum dolor sit amet consectet</p>
+    <span class="price">233100</span>
+    <div class="is_available"></div>
+</div>
 </section>
 @endsection
