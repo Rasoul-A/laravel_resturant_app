@@ -21,9 +21,9 @@
     <span class="price">233100</span>
     <div class="is_available"></div>
     <div class="controls">
-        <div class="order btn btn-blue"><span>Order</span>
-            <div class="order_form">Order form</div>
-        </div>
+        <button class="order btn btn-blue">Order
+        </button>
+        <div class="order_form">Order form</div>
         <button class="btn btn-red">Comments</button>
     </div>
 </div>

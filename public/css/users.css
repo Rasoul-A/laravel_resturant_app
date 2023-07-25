@@ -101,7 +101,7 @@ a{
     background-color: brown;
     display: none;
 }
-.controls .order:active .order_form{
+.controls .order:focus + div{
     display: block;
     background-color: darkkhaki;
 }
