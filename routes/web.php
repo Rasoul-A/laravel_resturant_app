@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ResturantItemsController;
+use App\Http\Controllers\UserOrderController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 
@@ -34,7 +35,6 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Route::get('/home',function(){
-    return view('users.home');
-})->name('home');
+Route::get('/home',[UserOrderController::class, 'index'])->name('home');
+Route::post('/home', [UserOrderController::class, 'add_to_cart'])->name('home.add_to_cart');
 require __DIR__.'/auth.php';

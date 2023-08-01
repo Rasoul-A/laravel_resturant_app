@@ -86,6 +86,9 @@ a{
     width: 70%;
     background-color: beige;
 }
+.item-card > *{
+    margin-left: 1rem;
+}
 .item-card .price{
     display: block;
 }
@@ -97,13 +100,13 @@ a{
 }
 .item-card .order_form{
     width: 100%;
-    height: 30px;
-    background-color: brown;
-    display: none;
+    height: auto;
+    /* background-color: brown; */
+    display: block;
 }
-.controls .order:focus + div{
+/* .controls .order:focus + div{
     display: block;
     background-color: darkkhaki;
-}
+} */
 
 
