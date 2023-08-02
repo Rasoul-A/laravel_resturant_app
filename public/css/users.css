@@ -104,6 +104,10 @@ a{
     /* background-color: brown; */
     display: block;
 }
+.order_status_indicator{
+    margin-left: 1.5rem;
+    font-size: 2rem;
+}
 /* .controls .order:focus + div{
     display: block;
     background-color: darkkhaki;

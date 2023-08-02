@@ -37,4 +37,5 @@ Route::middleware('auth')->group(function () {
 });
 Route::get('/home',[UserOrderController::class, 'index'])->name('home');
 Route::post('/home', [UserOrderController::class, 'add_to_cart'])->name('home.add_to_cart');
+Route::delete('/home',[UserOrderController::class, 'delete_from_cart'])->name('home.delete_from_cart');
 require __DIR__.'/auth.php';
